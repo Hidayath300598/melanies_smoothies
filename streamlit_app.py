@@ -33,6 +33,10 @@ ingredients_list = st.multiselect(
     my_dataframe
 )
 
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
+
 if ingredients_list:
     # st.write(ingredients_list) #This is coming as K:V
     # st.text(ingredients_list)
